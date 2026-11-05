@@ -1,0 +1,533 @@
+/* ==========================================================================
+   VARIABLES Y COLORES VIVOS Y PLAYEROS
+   ========================================================================== */
+:root {
+  --color-sun-yellow: #ffb703;
+  --color-sunset-orange: #fb8500;
+  --color-turquoise: #00b4d8;
+  --color-ocean-blue: #0077b6;
+  --color-deep-blue: #03045e;
+  --color-sand: #fefae0;
+  --color-dark: #111827;
+  --color-light: #f8fafc;
+  
+  --font-title: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-sand);
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   NAVEGACIÓN
+   ========================================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(3, 4, 94, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-sun-yellow);
+}
+
+.brand-title {
+  color: #fff;
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbar nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: var(--color-sun-yellow);
+}
+
+/* ==========================================================================
+   HERO / FONDO PLAYERO VIBRANTE
+   ========================================================================== */
+.hero {
+  position: relative;
+  /* Fondo con degradado playero brillante inspirado en el mar tropical y el sol (generada) */
+  background: linear-gradient(135deg, rgba(0, 180, 216, 0.85), rgba(3, 4, 94, 0.9)), url('hero_beach.jpg') center/cover no-repeat;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle, rgba(0,180,216,0.4) 0%, rgba(3,4,94,0.8) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-logo {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--color-sun-yellow);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  animation: pulseLogo 3s infinite ease-in-out;
+}
+
+@keyframes pulseLogo {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+.hero h1 {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 2px 3px 10px rgba(0,0,0,0.6);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #e0fbfc;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--color-sun-yellow), var(--color-sunset-orange));
+  color: var(--color-dark);
+  padding: 14px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 6px 20px rgba(251, 133, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(251, 133, 0, 0.6);
+}
+
+/* ==========================================================================
+   FRASES MARINAS
+   ========================================================================== */
+.phrases-section {
+  background: linear-gradient(90deg, var(--color-ocean-blue), var(--color-turquoise));
+  padding: 60px 0;
+  color: #fff;
+}
+
+.phrases-section .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.phrase-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 35px;
+  border-radius: 16px;
+  border-left: 6px solid var(--color-sun-yellow);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.quote-icon {
+  font-size: 2.2rem;
+  color: var(--color-sun-yellow);
+  margin-bottom: 15px;
+}
+
+.phrase-card h2 {
+  font-family: var(--font-title);
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* ==========================================================================
+   GALERÍA DE PLATOS PROFESIONALES Y APETECIBLES
+   ========================================================================= */
+.gallery-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 2.6rem;
+  color: var(--color-deep-blue);
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 40px;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 119, 182, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #e0fbfc;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0, 119, 182, 0.22);
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  filter: contrast(1.08) saturate(1.15);
+}
+
+.gallery-item:hover .img-wrapper img {
+  transform: scale(1.06);
+}
+
+.gallery-info {
+  padding: 30px;
+}
+
+.gallery-info h3 {
+  font-family: var(--font-title);
+  color: var(--color-deep-blue);
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.gallery-info p {
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   MENÚ (SIN PRECIOS)
+   ========================================================================== */
+.menu-section {
+  background: linear-gradient(135deg, var(--color-deep-blue), var(--color-ocean-blue));
+  padding: 90px 0;
+}
+
+.text-light {
+  color: #fff !important;
+}
+
+.menu-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 35px;
+}
+
+.menu-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.menu-card-header {
+  border-bottom: 2px solid var(--color-sun-yellow);
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+.menu-card-header h3 {
+  color: var(--color-sun-yellow);
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-list {
+  list-style: none;
+}
+
+.menu-list li {
+  margin-bottom: 22px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+  padding-bottom: 15px;
+}
+
+.menu-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.item-header {
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.15rem;
+  margin-bottom: 5px;
+}
+
+.menu-list p {
+  color: #e2e8f0;
+  font-size: 0.92rem;
+}
+
+/* ==========================================================================
+   REDES SOCIALES Y CONTACTO
+   ========================================================================== */
+.social-section {
+  background: #ffffff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.social-section h2 {
+  font-family: var(--font-title);
+  font-size: 2.3rem;
+  color: var(--color-deep-blue);
+  margin-bottom: 10px;
+}
+
+.social-section p {
+  color: #4b5563;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  border-radius: 35px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.social-btn.facebook { background-color: #1877f2; }
+.social-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-btn.tiktok { background-color: #000000; }
+
+/* ==========================================================================
+   BOTÓN FLOTANTE WHATSAPP
+   ========================================================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: #fff;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  z-index: 10000;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.12);
+}
+
+.whatsapp-float .tooltip {
+  visibility: hidden;
+  width: 150px;
+  background-color: #111827;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  right: 75px;
+  font-size: 0.85rem;
+  font-weight: normal;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.whatsapp-float:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ==========================================================================
+   FOOTER (PIE DE PÁGINA)
+   ========================================================================== */
+.footer {
+  background-color: var(--color-deep-blue);
+  color: #fff;
+  padding: 60px 0 25px;
+  border-top: 5px solid var(--color-sun-yellow);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-sun-yellow);
+  box-shadow: 0 0 25px rgba(255, 183, 3, 0.5);
+}
+
+.footer-quote {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  color: var(--color-sun-yellow);
+  font-style: italic;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.footer-info p {
+  margin: 6px 0;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+}
+
+.footer-info .copyright {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* ==========================================================================
+   RESPONSIVO
+   ========================================================================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .navbar nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .gallery-grid, .menu-categories {
+    grid-template-columns: 1fr;
+  }
+}

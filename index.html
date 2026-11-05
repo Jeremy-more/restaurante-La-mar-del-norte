@@ -1,12 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante La Mar del Norte | Lo Mejor del Norte en Mariscos</title>
+  <!-- Google Fonts para tipografía atractiva -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Font Awesome para Iconos de Redes Sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+  <!-- Encabezado / Navegación -->
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo Profesional La Mar del Norte" class="header-logo">
+      <span class="brand-title">La Mar del Norte</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#frases">Inspiración</a></li>
+        <li><a href="#galeria">Especialidades</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section con Sensación Playera -->
+  <section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="logo.png" alt="Logo Principal La Mar del Norte" class="hero-logo">
+      <h1>Sabor, Brisa y lo Mejor del Norte</h1>
+      <p>Deléitate con los mariscos más frescos, preparados con la auténtica pasión norteña.</p>
+      <a href="#menu" class="btn-primary"><i class="fa-solid fa-utensils"></i> Descubrir el Menú</a>
+    </div>
+  </section>
+
+  <!-- Banner de Frases de Amor y el Mar -->
+  <section id="frases" class="phrases-section">
+    <div class="container">
+      <div class="phrase-card">
+        <i class="fa-solid fa-heart quote-icon"></i>
+        <h2>"El amor es como el mar: profundo, inmenso y lleno de sabores que enamoran."</h2>
+      </div>
+      <div class="phrase-card">
+        <i class="fa-solid fa-water quote-icon"></i>
+        <h2>"Entre olas y mareas, nuestro corazón late al ritmo de la mejor sazón del norte."</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería de Platillos Profesionales y Apetecibles -->
+  <section id="galeria" class="gallery-section">
+    <div class="container">
+      <h2 class="section-title">Nuestras Joyas Marinas</h2>
+      <p class="section-subtitle">Preparados con el arte y la frescura que solo 'La Mar' te puede ofrecer.</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="img-wrapper">
+            <!-- Imagen 1: Ceviche Gourmet (generada) -->
+            <img src="ceviche.jpg" alt="Primer Plano de Ceviche Gourmet Peruano">
+          </div>
+          <div class="gallery-info">
+            <h3>Ceviche Tradicional</h3>
+            <p>El clásico norteño: pescado fresco, limón, ají limo, cebolla roja, camote y choclo tierno.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="img-wrapper">
+            <!-- Imagen 2: Arroz con Mariscos Apetecible (generada) -->
+            <img src="arroz_mariscos.jpg" alt="Plato Apetecible de Arroz con Mariscos">
+          </div>
+          <div class="gallery-info">
+            <h3>Arroz con Mariscos</h3>
+            <p>Una explosión de sabor: arroz cremoso salteado con mixtura selecta de mariscos y el toque secreto del norte.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menú sin Precios -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <h2 class="section-title text-light">Nuestro Menú</h2>
+      <p class="section-subtitle text-light">Una selección de lo mejor del mar peruano</p>
+
+      <div class="menu-categories">
+        
+        <!-- Entradas -->
+        <div class="menu-card">
+          <div class="menu-card-header">
+            <h3><i class="fa-solid fa-fish"></i> Entradas Marinas</h3>
+          </div>
+          <ul class="menu-list">
+            <li>
+              <div class="item-header"><span>Ceviche Tradicional</span></div>
+              <p>Pesca del día curada en limón jugoso, ají limo, cebolla roja, camote y cancha dorada.</p>
+            </li>
+            <li>
+              <div class="item-header"><span>Ceviche Mixto "La Mar"</span></div>
+              <p>Pescado, pulpo, calamar y mariscos seleccionados con leche de tigre vibrante.</p>
+            </li>
+            <li>
+              <div class="item-header"><span>Leche de Tigre Poderosa</span></div>
+              <p>Concentrado puro de limón y pescado con chicharrón de pota y choclo tierno.</p>
+            </li>
+            <li>
+              <div class="item-header"><span>Conchas a la Parmesana</span></div>
+              <p>Conchas de abanico gratinadas con mantequilla fina y queso derretido al toque del norte.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Platos de Fondo -->
+        <div class="menu-card">
+          <div class="menu-card-header">
+            <h3><i class="fa-solid fa-fire"></i> Platos de Fondo</h3>
+          </div>
+          <ul class="menu-list">
+            <li>
+              <div class="item-header"><span>Arroz con Mariscos Norteño</span></div>
+              <p>Salteado con aderezo criollo, crema de ají amarillo y mixtura fresca del mar.</p>
+            </li>
+            <li>
+              <div class="item-header"><span>Parihuela "Levanta Muertos"</span></div>
+              <p>Sopa concentrada y potente con mariscos, cangrejo y pescado entero.</p>
+            </li>
+            <li>
+              <div class="item-header"><span>Sudado de Pescado del Día</span></div>
+              <p>Cocinado a fuego lento con chicha de jora, culantro, yuca y tomate fresco.</p>
+            </li>
+            <li>
+              <div class="item-header"><span>Chicharrón Mixto Crocante</span></div>
+              <p>Mariscos y pescado empanizados con yucas doradas y salsa tártara de la casa.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Especiales -->
+        <div class="menu-card">
+          <div class="menu-card-header">
+            <h3><i class="fa-solid fa-star"></i> Especialidades de la Casa</h3>
+          </div>
+          <ul class="menu-list">
+            <li>
+              <div class="item-header"><span>Dúo Marino</span></div>
+              <p>La combinación perfecta de Ceviche fresco y Arroz con mariscos.</p>
+            </li>
+            <li>
+              <div class="item-header"><span>Trío Playero</span></div>
+              <p>Ceviche, arroz con mariscos y chicharrón mixto en un solo plato.</p>
+            </li>
+            <li>
+              <div class="item-header"><span>Ronda Suprema La Mar del Norte</span></div>
+              <p>El banquete definitivo para compartir con lo mejor de nuestra cocina marina.</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Redes Sociales y Contacto -->
+  <section id="contacto" class="social-section">
+    <div class="container">
+      <h2>¡Conéctate con el sabor!</h2>
+      <p>Síguenos en nuestras redes oficiales y vive la experiencia 'La Mar'</p>
+
+      <div class="social-buttons">
+        <a href="https://www.facebook.com/share/1DUV9EvvAC/" target="_blank" rel="noopener noreferrer" class="social-btn facebook">
+          <i class="fa-brands fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/restaurant_la_mar?cplk=bHd1MXlqcGl3cGg1" target="_blank" rel="noopener noreferrer" class="social-btn instagram">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.tiktok.com/@restaurantelamardelnort3?_r=1&_t=ZS-9B9sOxHByiN" target="_blank" rel="noopener noreferrer" class="social-btn tiktok">
+          <i class="fa-brands fa-tiktok"></i> TikTok
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón Flotante de WhatsApp -->
+  <a href="https://wa.me/51972019268?text=Hola,%20quisiera%20más%20información%20o%20hacer%20un%20pedido%20en%20La%20Mar%20del%20Norte" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Escríbenos por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="tooltip">¡Escríbenos aquí!</span>
+  </a>
+
+  <!-- Pie de Página (Footer) -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <!-- Logo en el pie de página -->
+        <img src="logo.png" alt="Logo La Mar del Norte" class="footer-logo">
+        <h3 class="footer-quote">"La vida es más rica en La Mar"</h3>
+      </div>
+      <div class="footer-info">
+        <p><i class="fa-solid fa-water"></i> Lo mejor del norte peruano</p>
+        <p><i class="fa-solid fa-phone"></i> +51 972 019 268</p>
+        <p class="copyright">&copy; 2026 Restaurante La Mar del Norte. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
